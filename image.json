@@ -1,0 +1,41 @@
+{
+    "Images": [
+        {
+            "ProductCodes": [
+                {
+                    "ProductCodeId": "d1k9jvgn6u82wljj5xsw1ogxs", 
+                    "ProductCodeType": "marketplace"
+                }
+            ], 
+            "Description": "CIS Centos Linux 7 Benchmark v2.1.1.0 - Level 1", 
+            "VirtualizationType": "hvm", 
+            "Hypervisor": "xen", 
+            "ImageOwnerAlias": "aws-marketplace", 
+            "EnaSupport": true, 
+            "SriovNetSupport": "simple", 
+            "ImageId": "ami-ad2ed3d0", 
+            "State": "available", 
+            "BlockDeviceMappings": [
+                {
+                    "DeviceName": "/dev/sda1", 
+                    "Ebs": {
+                        "Encrypted": false, 
+                        "DeleteOnTermination": false, 
+                        "VolumeType": "gp2", 
+                        "VolumeSize": 8, 
+                        "SnapshotId": "snap-008c279b4d0404839"
+                    }
+                }
+            ], 
+            "Architecture": "x86_64", 
+            "ImageLocation": "aws-marketplace/CIS Centos Linux 7 Benchmark v2.1.1.0 - Level 1-dc51a635-30f4-4fbe-8bc5-aa54bc6c8cc0-ami-2a1d1950.4", 
+            "RootDeviceType": "ebs", 
+            "OwnerId": "679593333241", 
+            "RootDeviceName": "/dev/sda1", 
+            "CreationDate": "2018-03-06T00:03:29.000Z", 
+            "Public": true, 
+            "ImageType": "machine", 
+            "Name": "CIS Centos Linux 7 Benchmark v2.1.1.0 - Level 1-dc51a635-30f4-4fbe-8bc5-aa54bc6c8cc0-ami-2a1d1950.4"
+        }
+    ]
+}

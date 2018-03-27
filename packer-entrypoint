@@ -1,0 +1,43 @@
+#!/bin/bash
+set -eo pipefail
+
+export IS_MISSING_VARIABLE=0;
+
+function set_missing(){
+  echo "A required environment variable is missing: ${1}";
+  IS_MISSING_VARIABLE=1;
+}
+
+if [[ -z "${SSM_KEY}" ]];
+then
+  set_missing "SSM_KEY";
+fi
+
+if [[ -z "${PACKER_FILE}" ]];
+then
+  set_missing "PACKER_FILE";
+fi
+
+if [[ -z "${TAG}" ]];
+then
+  set_missing "TAG";
+fi
+
+if [[ -z "${REGION}" ]];
+then
+  set_missing "REGION";
+fi
+
+if [[ $IS_MISSING_VARIABLE = 1 ]];
+then
+  exit 255;
+fi
+
+echo "Validating: $PACKER_FILE"
+packer validate $PACKER_FILE
+
+echo "Building: $PACKER_FILE"
+packer build $PACKER_FILE | tee output.txt
+export AMI=`cat output.txt | grep "${REGION}: ami-" | sed "s/${REGION}: //"`
+
+aws ssm put-parameter --name "${SSM_KEY}" --value "${AMI}" --description "${TAG}" --type "String" --overwrite
