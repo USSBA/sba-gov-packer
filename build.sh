@@ -1,5 +1,6 @@
 #!/bin/bash
 set -uo pipefail
+export IMAGE_NAME="ussba/packer-git-awscli"
 
-export IMAGE_NAME="sba-gov-centos7-packer"
+docker image pull hashicorp/packer:light
 docker image build -t ${IMAGE_NAME} .
