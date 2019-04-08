@@ -32,8 +32,7 @@ Please follow this guidelines in all interactions:
 ## Security Issues
 
 Please do not submit an issue on GitHub for a security vulnerability.
-Instead, contact the development team through [SBA Website Support](mailto:support@us-sba.atlassian.net).
-
+Instead, contact the development team through [HQVulnerabilityManagement](HQVulnerabilityManagement@sba.gov).
 Be sure to include **all** pertinent information.
 
 <sub>The agency reserves the right to change this policy at any time.</sub>
