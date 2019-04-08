@@ -11,7 +11,7 @@ Contributions that include appropriate unit tests are more likely to be accepted
 ## Feedback
 
 To provide feedback on the code please create an issue on GitHub.
-For other issues please contact the [SBA Website Support](mailto:support@us-sba.atlassian.net).
+For other issues please contact the [HQVulnerabilityManagement](mailto:HQVulnerabilityManagement@sba.gov).
 
 ## How to Contribute
 
